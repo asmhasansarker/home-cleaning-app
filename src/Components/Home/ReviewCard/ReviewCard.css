@@ -1,0 +1,16 @@
+.review-content{
+    z-index: 10;
+}
+.small-square{
+    height:30px;
+    width: 30px;
+    margin-top: -22px;
+    margin-left: 22px;
+    background-color: red;
+    transform: rotate(45deg);
+    z-index: -10;
+}
+.custom-design:hover{
+    transform: scale(1.05);
+    transition:  0.5s;
+}

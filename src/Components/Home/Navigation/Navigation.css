@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+.container .logo h4{
+    font-family: 'Lora', serif !important;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700 !important;
+    font-size: 30px;
+    color:white !important;
+    text-shadow: 2px 2px 10px #CE5937;
+    
+    
+}
+.container .logo img{
+    /* font-family: 'Lora', serif !important;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700 !important;
+    font-size: 30px;
+    color:white !important;
+    text-shadow: 2px 2px 10px #CE5937; */
+    max-height: 60px;
+    
+}
+
+.custom-color{
+    background: #3498db;
+}

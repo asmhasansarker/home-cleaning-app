@@ -1,0 +1,8 @@
+.custom-design:hover{
+    transform: scale(1.05);
+    transition:  0.5s;
+}
+
+.custom-design img{
+    max-height: 200px !important;
+}

@@ -1,23 +1,97 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import { createContext, useState } from "react";
+import Home from './Components/Home/Home/Home';
+import AddService from './Components/AddService/AddService';
+import AddReview from './Components/AddReview/AddReview';
+// import Navigation from './Components/Home/Navigation/Navigation';
+import Login from './Components/Login/Login';
+// import Dashboard from './Components/Dashboard/Dashboard';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+// import Sidebar from './Components/Sidebar/Sidebar';
+// import Testing from './Components/Testing/Testing';
+import Book from './Components/Book/Book';
+import BookingList from './Components/BookingList/BookingList';
+import NoItemBook from './Components/NoItemBook/NoItemBook';
+import ManageService from './Components/ManageService/ManageService';
+import NewAdmin from './Components/NewAdmin/NewAdmin';
+import WelcomeToDashboard from './Components/WelcomeToDashboard/WelcomeToDashboard';
+import Admin from './Components/Admin/Admin';
+// import PaymentGateway from './Components/PaymentGateway/PaymentGateway';
+
+export const UserContext = createContext()
+
+
+
 
 function App() {
+  const [user, setUser] = useState({
+    isSignedIn: false,
+    name: '',
+    email: '',
+    password: '',
+    photo: '',
+    error: '',
+    success: false,
+    newUser: false,
+    imageURL:"",
+    rideName:"" 
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UserContext.Provider value={[user, setUser]}>
+      <Router>
+      
+        <Switch>
+        <Route path="/home">
+              <Home></Home>
+          </Route>
+          <PrivateRoute path="/dashboard/admin">
+              <Admin></Admin>
+          </PrivateRoute>
+          <Route path="/dashboard/addService">
+              <AddService></AddService>
+          </Route>
+          <Route path="/dashboard/bookingList">
+              <BookingList></BookingList>
+          </Route>
+          <Route path="/dashboard/bookingList">
+              <BookingList></BookingList>
+          </Route>
+         
+          <Route path="/dashboard/review">
+              <AddReview></AddReview>
+          </Route>
+          <Route path="/login">
+              <Login></Login>
+          </Route>
+                   
+          <PrivateRoute path="/dashboard/book/:serviceKey">
+              <Book></Book>
+          </PrivateRoute>
+          <Route path="/dashboard/book">
+              <NoItemBook></NoItemBook>
+          </Route>
+          <Route path="/dashboard/manageService">
+              <ManageService></ManageService>
+          </Route>
+          <Route path="/dashboard/newAdmin">
+              <NewAdmin></NewAdmin>
+          </Route>
+          <PrivateRoute path="/dashboard">
+              <WelcomeToDashboard></WelcomeToDashboard>
+          </PrivateRoute>
+          
+          <Route exact path="/">
+              <Home></Home>
+          </Route>
+        </Switch>
+      </Router>
+      </UserContext.Provider>
     </div>
   );
 }

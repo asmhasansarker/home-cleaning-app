@@ -1,0 +1,10 @@
+.sidebar{
+    height: 100vh;
+    background-color: #a29bfe;
+    
+}
+.sidebar img{
+    margin-left: 40px;
+    margin-top: 40px;
+    max-height: 60px;
+}
