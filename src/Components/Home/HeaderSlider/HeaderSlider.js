@@ -3,10 +3,11 @@ import { Carousel } from "react-bootstrap";
 import slideOne from "../../../images/slideOne.jpg"
 import slideTwo from "../../../images/slideTwo.jpg"
 import slideThree from "../../../images/slideThree.jpg"
+import './HeaderSlider.css'
 
 const HeaderSlider = () => {
   return (
-    <div>
+    <div className="custom-header">
       <Carousel>
         <Carousel.Item>
           <img

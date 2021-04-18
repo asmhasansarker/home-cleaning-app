@@ -6,7 +6,7 @@ import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 const ReviewCard = (props) => {
   const { reviewerName,  reviewDetails } = props.review;
   return (
-    <div className="col-md-4 custom-design">
+    <div className="col-md-4 custom-review">
 
         <div className="card review-content border-0 shadow" style={{ width: "18rem" }}>
           <div className="card-body">

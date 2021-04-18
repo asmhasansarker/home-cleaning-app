@@ -9,8 +9,9 @@
 
 @media screen and (max-width: 520px) {
     .custom-design .custom-card{
-      display: block;
+      
       margin-top: 25px;
-      margin-left: 10px !important;
+      margin-left: 35px;
+      
     }
   }
