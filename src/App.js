@@ -21,14 +21,17 @@ import ManageService from './Components/ManageService/ManageService';
 import NewAdmin from './Components/NewAdmin/NewAdmin';
 import WelcomeToDashboard from './Components/WelcomeToDashboard/WelcomeToDashboard';
 import Admin from './Components/Admin/Admin';
+import CheckAdmin from './Components/CheckAdmin/CheckAdmin';
 // import PaymentGateway from './Components/PaymentGateway/PaymentGateway';
 
 export const UserContext = createContext()
+export const AdminCheck = createContext();
 
 
 
 
 function App() {
+  const [admin, setAdmin] = useState(false);
   const [user, setUser] = useState({
     isSignedIn: false,
     name: '',
@@ -38,12 +41,13 @@ function App() {
     error: '',
     success: false,
     newUser: false,
-    imageURL:"",
-    rideName:"" 
+    imageURL:""
+    
   })
   return (
     <div>
       <UserContext.Provider value={[user, setUser]}>
+        <AdminCheck.Provider value={[admin, setAdmin]}>
       <Router>
       
         <Switch>
@@ -82,6 +86,9 @@ function App() {
           <Route path="/dashboard/newAdmin">
               <NewAdmin></NewAdmin>
           </Route>
+          {/* <PrivateRoute path="/checkAdmin">
+              <CheckAdmin></CheckAdmin>
+          </PrivateRoute> */}
           <PrivateRoute path="/dashboard">
               <WelcomeToDashboard></WelcomeToDashboard>
           </PrivateRoute>
@@ -91,6 +98,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      </AdminCheck.Provider>
       </UserContext.Provider>
     </div>
   );

@@ -2,6 +2,7 @@
     /* background-image: url(../../../images/footer-bg.png); */
     background-size: cover;
     background-color: #c8d6e5;
+   
 }
 
 .footer-area li{
@@ -20,3 +21,10 @@
     background-color: #6ACECE ;
     color:white;
 }
+
+@media screen and (max-width: 520px) {
+    .footer-area {
+        text-align: center;
+    }
+    
+  }

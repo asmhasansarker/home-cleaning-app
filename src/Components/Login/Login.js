@@ -3,7 +3,7 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { UserContext } from "../../App";
+import { AdminCheck, UserContext } from "../../App";
 import { useHistory, useLocation } from "react-router";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons'
@@ -20,6 +20,7 @@ else {
 
 function Login() {
     const [user, setUser] = useContext(UserContext)
+    const [admin, setAdmin] = useContext(AdminCheck)
     // const [newUser, setNewUser] = useState(false)
 
     const history = useHistory();
@@ -101,6 +102,8 @@ function Login() {
             }).catch((error) => {
                 console.log(error)
             });
+            setAdmin(false);
+
     }
     const handleBlur = (event) => {
         let isFieldValid = true;

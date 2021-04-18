@@ -1,0 +1,10 @@
+@media screen and (max-width: 520px) {
+    .custom-contact-details{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    
+  }

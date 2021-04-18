@@ -51,10 +51,10 @@ const AddService = () => {
 
   return (
     <div className="container row ">
-      <div className="col-md-4">
+      <div className="col-md-3">
         <Sidebar></Sidebar>
       </div>
-      <div className="col-md-8 jumbotron">
+      <div className="col-md-9 jumbotron">
       <h1 className="text-center">Add a Service</h1>
       <hr/>
       <form onSubmit={handleSubmit}>

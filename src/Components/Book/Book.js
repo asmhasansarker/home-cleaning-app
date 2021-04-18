@@ -11,6 +11,7 @@ const Book = () => {
   const [user] = useContext(UserContext);
   const { serviceKey } = useParams();
   const [myService, setMyService] = useState({});
+  const [status, setStatus] = useState('Pending');
 
   let date = new Date();
   let dateString = date.toDateString("dd/MM/yyyy");
@@ -21,6 +22,7 @@ const Book = () => {
       ...myService,
       paymentId,
       orderTime: dateString,
+      status
     };
     fetch("https://stark-cove-09835.herokuapp.com/addOrder", {
       method: "POST",
@@ -45,10 +47,10 @@ const Book = () => {
 
   return (
     <div className="container row">
-      <div className="col-md-4">
+      <div className="col-md-3">
         <Sidebar></Sidebar>
       </div>
-      <div className="col-md-8">
+      <div className="col-md-9">
         <div>
           <div className="row d-flex justify-content-between my-3 py-2">
             <div className="col-md-6 h5">Book</div>

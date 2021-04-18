@@ -21,10 +21,10 @@ const AddReview = () => {
   };
   return (
     <div className="container row">
-      <div className="col-md-4">
+      <div className="col-md-3">
         <Sidebar></Sidebar>
       </div>
-      <div className="col-md-8 jumbotron">
+      <div className="col-md-9 jumbotron">
         <div className="container">
           <h1 className="text-center">Your Review</h1>
           <hr/>

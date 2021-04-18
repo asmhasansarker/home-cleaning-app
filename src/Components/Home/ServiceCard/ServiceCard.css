@@ -6,3 +6,11 @@
 .custom-design img{
     max-height: 200px !important;
 }
+
+@media screen and (max-width: 520px) {
+    .custom-design .custom-card{
+      display: block;
+      margin-top: 25px;
+      margin-left: 10px !important;
+    }
+  }

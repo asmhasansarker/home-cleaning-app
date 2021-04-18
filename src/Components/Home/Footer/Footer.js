@@ -49,7 +49,7 @@ const Footer = () => {
                     </FooterCol>
                     <FooterCol key={2} menuTitle="Quick Navigation" menuItems={quickNavigation}/>
                     <FooterCol key={3} menuTitle="Contact Details" menuItems={contactDetails}>
-                        <div className="row">
+                        <div className="row custom-contact">
                         {
                             contactCard.map(contact => <ContactDetailsCard contact={contact}></ContactDetailsCard>)
                         }

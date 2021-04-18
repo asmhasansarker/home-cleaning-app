@@ -17,7 +17,7 @@ const Navigation = () => {
         <Navbar.Brand as={Link} to="/" className="logo d-flex">
           <img src={logo} className="img-fluid" alt=""/>
           
-          <h4 className="ml-1 mt-2">Fell Fresh</h4>
+          <h4 className="ml-1 mt-2">Feel Fresh</h4>
          
        
         </Navbar.Brand>
@@ -29,7 +29,10 @@ const Navigation = () => {
             </Nav.Link>
             <Nav.Link as={Link} to="/dashboard" className="mx-2 text-white">
             Dashboard
-            </Nav.Link>      
+            </Nav.Link>    
+            {/* <Nav.Link as={Link} to="/checkAdmin" className="mx-2 text-white">
+            Check Admin
+            </Nav.Link>    */}
 
             {/* <Nav.Link as={Link} to="/dashboard/admin" className="mx-2 text-white">
             Admin
@@ -37,7 +40,7 @@ const Navigation = () => {
  
 
             <Nav.Link as={Link} to={user.email ? `/dashboard/admin` : `/login`} className="mx-2 text-white">
-            {user.email ? `${user.name}` : 'Login' }
+            {user.email ? `${user.name}` : 'Admin' }
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

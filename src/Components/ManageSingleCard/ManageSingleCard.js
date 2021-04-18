@@ -13,18 +13,14 @@ const ManageSingleCard = ({ service, handleDeleteService }) => {
       
   }, [service]);
 
+  
+
   return (
     <>
-      <div className="col-md-3 mt-2">{serviceTitle}</div>
-      <div className="col-md-3 mt-2">${serviceCharge}</div>
-      <div className="col-md-3 mt-2">
-        <select className="form-select w-75 " aria-label="Default select example">
-          <option selected value="1">Pending</option>
-          <option value="2">On going</option>
-          <option value="3">Done</option>
-        </select>
-      </div>
-      <div className="col-md-3 mt-2">
+      <div className="col-md-4 mt-2">{serviceTitle}</div>
+      <div className="col-md-4 mt-2">${serviceCharge}</div>
+      
+      <div className="col-md-4 mt-2">
         <button className="btn btn-danger" onClick={() => handleDeleteService(_id)}><FontAwesomeIcon className="mx-2" icon={faTrashAlt} /></button>
       </div>
     </>

@@ -15,7 +15,7 @@ const HeaderSlider = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3 className="text-dark">First slide label</h3>
+            <h3 className="text-dark">World No. 1 Cleaning Company</h3>
             <p className="text-dark">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -27,7 +27,7 @@ const HeaderSlider = () => {
           />
 
           <Carousel.Caption>
-            <h3 className="text-dark">Second slide label</h3>
+            <h3 className="text-dark">Contact with us to clean your Home</h3>
             <p className="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -39,7 +39,7 @@ const HeaderSlider = () => {
           />
 
           <Carousel.Caption>
-            <h3 className="text-dark">Third slide label</h3>
+            <h3 className="text-dark">Clients satisfaction is our main Goal</h3>
             <p className="text-dark">
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>
